@@ -13,6 +13,7 @@ export const ValidateEmailDetails = (props) => {
   }, [name, email, password, hasRegistered]);
 
   const registerUser = async () => {
+    console.log("enetered into registerUser");
     const data = { name, email, password };
     try {
       const response = await fetch('http://localhost:8080/api/v1/auth/register', {
